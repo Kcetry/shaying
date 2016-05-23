@@ -48,15 +48,11 @@ define(["smartgrid", "text!./productList.html", "css!./productList.css"], functi
                 vm.selectedId = rowData._id;
             },
             columns: [
-                {key: "name",name: "名称",width: 90,}, 
-                {key: "title",name: "标题",width: 90}, 
-                {key: "measure",name: "单位",width: 90},
-                {key: "type",name: "种类",width: 90}, 
-                {key: "salePrice",name: "原价",width: 90}, 
-                {key: "retailPrice",name: "售价",width: 90}, 
-                {key: "sold",name: "已售",width: 90}, 
-                {key: "stock",name: "库存",width: 90}, 
-                {key: "regDate",name: "上架日期",width: 100}
+                {key: "name",name: "名称",width: 150,}, 
+                {key: "salePrice",name: "原价",width: 150}, 
+                {key: "retailPrice",name: "售价",width: 150}, 
+                {key: "sold",name: "已预约",width: 150}, 
+                {key: "regDate",name: "日期",width: 150}
             ]
         }
     });

@@ -16,7 +16,7 @@ var orderSchema = new Schema({
 		state:{type:String,enum:['未审核','通过','屏蔽'],default:'未审核'},
 		date:{type:Date,default: Date.now}
 	},
-	state:{type:String,enum:['未发货','已发货','已收货','已评价','已申请退款','已退款'],default:'未发货'},
+	state:{type:String,enum:['未预约','已预约','预约成功','交易完成','已评价'],default:'未预约'},
 	regDate:{type: Date,default: Date.now},
 });
 
