@@ -50,10 +50,12 @@ router.route('/order').post(function(req, res) {
 	//问题二:req.body获取的字符串[]被换成了":{"和":""
 	//解决方案:replace配合正则替换
 	var string = JSON.stringify(req.body);
+	console.log("order="+string);
 	string = string.replace(/\\/g, "");
 	string = string.substring(2,string.length-1);
 	string = string.replace(/":{"/,"[");
 	string = string.replace(/":""/,"]");
+	console.log("orders="+string);
 	var body = JSON.parse(string);
 	var order = new Order(body);
 	order.save(function(err) {
