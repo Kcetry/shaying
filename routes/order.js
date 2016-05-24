@@ -51,11 +51,11 @@ router.route('/order').post(function(req, res) {
 	//解决方案:replace配合正则替换
 	var string = JSON.stringify(req.body);
 	console.log("order="+string);
-	string = string.replace(/\\/g, "");
-	string = string.substring(2,string.length-1);
+	//string = string.replace(/\\/g, "");
+	//string = string.substring(2,string.length-1);
 	//string = string.replace(/":{"/,"[");
 	//string = string.replace(/":""/,"]");
-	console.log("orders="+string);
+	//console.log("orders="+string);
 	var body = JSON.parse(string);
 	var order = new Order(body);
 	order.save(function(err) {
