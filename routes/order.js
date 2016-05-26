@@ -52,7 +52,7 @@ router.route('/order').post(function(req, res) {
 	var string = JSON.stringify(req.body);
 	console.log("order="+string);
 	string = string.replace(/\\/g, "");
-	string = string.substring(5,string.length-1);
+	string = string.substring(5,string.length-2);
 	//string = string.replace(/":{"/,"[");
 	//string = string.replace(/":""/,"]");
 	console.log("orders="+string);
